@@ -60,9 +60,3 @@ Additional coding best practices and examples may reference:
 - Status: In progress  
 - Notes and scripts updated daily in `/lessons` and `/notes`
 
----
-
-## 🧾 License
-
-This repository is for educational purposes only.  
-References and learning steps are based on **Programming with Mosh** and **Corey Schafer** tutorials.
