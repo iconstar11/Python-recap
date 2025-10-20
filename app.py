@@ -1,3 +1,18 @@
+lang = 'Python'
+target = 'beginners '
+title = lang + ' course for' + ' [' + target + '] Hi'
+
+heading = f'{lang} course for [{target}]'
+'''print(heading)
+
+print(len(target))
+print(target.find('e'))'''
+print(title.title())
+
+
+
+
+
 # === Hello World ====
 
 '''print('Antony Titan')
@@ -34,8 +49,8 @@ age = 2025 - int(birth_year)
 
 print(age)'''
 
-weight_kg = input('What is your weight in kg\'s? ')
+'''weight_kg = input('What is your weight in kg\'s? ')
 
 weight_pounds = 2.204623 * float(weight_kg)
 
-print('Your weight is', weight_pounds, 'pounds' )
+print('Your weight is', weight_pounds, 'pounds' )'''
