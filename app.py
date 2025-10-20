@@ -1,13 +1,55 @@
+import math
+
+# === Arithmetic Operations ====
+
+'''
+x = 10
+y = 3
+z = 11
+z %= 2
+
+print(z)
+print(x + y)
+print(x - y)
+print(x * y)
+print(x ** y)
+print(x / y)
+print(x // y)
+print(x % y)
+print(x + y)
+print(x + y)
+'''
+
+#======Math Functions=====
+
+z = 2.4
+
+print(abs(z))
+print(math.ceil(z))
+
+
+
+
+
+
+
+
+
+
+'''
+
+
 lang = 'Python'
 target = 'beginners '
 title = lang + ' course for' + ' [' + target + '] Hi'
 
 heading = f'{lang} course for [{target}]'
-'''print(heading)
+print(heading)
 
 print(len(target))
-print(target.find('e'))'''
+print(target.find('e'))
 print(title.title())
+'''
 
 
 
