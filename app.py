@@ -1,3 +1,36 @@
+command = ''
+started = False
+
+while True:
+    command = input('>_').lower()
+    if command == 'start':
+        if started == True:
+            print('Cannot start a started car')
+        else:
+            started = True
+            print('Car have started....')
+    elif command == 'stop':
+        if started == False:
+            print('Car is not moving')
+        else:
+            started = False
+            print('Car stopped')
+
+    elif command == 'help':
+        print('''
+        start - To start the car
+        stop - To stop the car
+        quit - To exit the game       
+        ''')
+    elif command == 'quit':
+        break
+    else:
+        print('Wrong command')
+
+
+
+
+'''
 i= 0
 correct_number = 9
 
@@ -10,7 +43,7 @@ while i<3:
     i += 1
 else: print('You failed')
 
-
+'''
 
 
 
