@@ -1,4 +1,21 @@
-weight = input('Weight: ')
+i= 0
+correct_number = 9
+
+
+while i<3:
+    your_guess = int(input('Guess a number btwn 1 and 9 '))
+    if your_guess == correct_number:
+        print(f'You are correct the number is {correct_number}')
+        break
+    i += 1
+else: print('You failed')
+
+
+
+
+
+
+'''weight = input('Weight: ')
 unit_of_Measure = input('L(bs) or K(g): ')
 
 if unit_of_Measure.upper() == 'K':
@@ -7,7 +24,11 @@ if unit_of_Measure.upper() == 'K':
 elif unit_of_Measure.upper() == 'L':
     Kg = int(weight) * 0.45
     print(f'You are {Kg} Kgs')
-else: print('Enter a valid unit of measure or weight')
+else: print('Enter a valid unit of measure or weight')'''
+
+
+
+
 
 '''name = input('Whats your name? ')
 
@@ -25,6 +46,9 @@ if temp>30:
 elif temp<10:
     print('Its a cold day')
 else: print('Its neither hot or cold')'''
+
+
+
 
 '''good_credit_worth = False
 
