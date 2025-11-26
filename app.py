@@ -1,4 +1,8 @@
-def main():
+for i in range(4):
+    print("?", end='')
+
+
+'''def main():
     height = get_height()
     for i in range(height):
         print("Meow !")
@@ -14,7 +18,7 @@ def get_height():
             print("Not a positive integer")
 
 
-main()
+main()'''
 
 
 '''For Loops'''
