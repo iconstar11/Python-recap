@@ -1,3 +1,45 @@
+def main():
+    height = get_height()
+    for i in range(height):
+        print("Meow !")
+
+
+def get_height():
+    while True:
+        try:
+            n = int(input("Height: "))
+            if n > 0:
+                return n
+        except ValueError:
+            print("Not a positive integer")
+
+
+main()
+
+
+'''For Loops'''
+'''numbers = [5, 2, 5, 2, 2]
+x = 0
+
+for no in numbers:
+    output = ''
+    for count in range(no):
+        output += 'X'
+
+    print(output)
+'''
+'''prices = [10, 20 , 30]
+cost = 0
+for item in prices:
+    cost += item
+print(f'cost is {cost}')
+'''
+
+'''for x in range(4):
+    for y in range(4):
+        print(f'x: {x} and y: {y}')
+'''
+'''
 command = ''
 started = False
 
@@ -17,18 +59,18 @@ while True:
             print('Car stopped')
 
     elif command == 'help':
-        print('''
+        print(''
         start - To start the car
         stop - To stop the car
         quit - To exit the game       
-        ''')
+        '')
     elif command == 'quit':
         break
     else:
         print('Wrong command')
 
 
-
+'''
 
 '''
 i= 0
