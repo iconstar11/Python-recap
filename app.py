@@ -1,6 +1,220 @@
-for i in range(4):
-    print("?", end='')
+import openpyxl as xl
 
+from openpyxl.chart import BarChart, Reference
+
+
+def process_workbook(filename):
+    wb = xl.load_workbook(f'{filename}')
+    sheet = wb['Sheet1']
+    cell = sheet['a1']
+    cell1 = sheet.cell(1,1)
+    # print(cell.value)
+    # print(cell1.value)
+    # print(sheet.max_row)
+
+    for row in range(2, sheet.max_row + 1):
+        cell_3 = sheet.cell(row, 3)
+        print(cell_3.value)
+        discount_price = cell_3.value * 0.9
+        discount_price_cell = sheet.cell(row, 4)
+        discount_price_cell.value = discount_price
+
+
+    values = Reference(sheet, min_row=2, max_row=sheet.max_row, min_col=4, max_col=4)
+    
+    chart = BarChart()
+    chart.add_data(values)
+    sheet.add_chart(chart, 'e2')
+    wb.save(f'{filename}2')
+
+
+
+'''city_map = {}
+
+
+cities = ["Nairobi", "Kiambu", "Turkana", "Kisumu"]
+
+city_map["Kenya"] = []
+city_map["Tanzania"] = []
+city_map["Kenya"] += cities
+city_map["Tanzania"] += cities
+print(city_map)
+
+print(city_map.values())'''
+'''from pathlib import Path
+path = Path()
+
+
+for file in path.glob("*"):
+    print(file)
+'''
+
+'''import random
+class Dice:
+    def role_dice(self):
+        outcome = random.randint(1,6) , random.randint(1,6)
+        return outcome
+dice = Dice()
+z = dice.role_dice()
+print(z)
+'''
+
+'''import e_commerce.shipping
+from e_commerce.shipping import calc_shipping
+
+calc_shipping()
+
+
+from utils import findMax
+
+print(findMax([2, 10, 7, 8]))'''
+
+
+'''import converter
+from converter import kg_to_lbs
+
+print(converter.kg_to_lbs(80))
+print(kg_to_lbs(80))'''
+
+'''class Mammal:
+    def Walk(self):
+        print("Walk")
+
+class Cat(Mammal):
+    pass
+
+class Dog(Mammal):
+    pass
+
+dog1 = Dog()
+dog1.Walk()'''
+
+
+'''class Person:
+    def __init__(self, name):
+        self.name = name
+    def talk(self):
+        print("I am speaking and I am")
+
+John = Person("Antony Kinuthia")
+
+John.talk()
+print(John.name)'''
+
+
+
+'''class Point:
+    def __init__(self, w, y):
+        self.w = w
+        self.y = y
+    def move(self):
+        print("Move")
+
+    def draw(self):
+        print("Draw")
+
+
+point = Point(10, 20)
+print(point.w)'''
+
+
+
+
+
+'''def square(number):
+    return number * number
+
+print(square(13 ))'''
+
+
+
+'''try:
+    age = int(input("What is your age? "))
+    print(age)
+except ValueError:
+    print("Invalid value")'''
+
+
+# '''def great_user(name, Id):
+#     print(f"Hi {name}, How are You {Id} ?")
+#     print("Welcome aboard")
+#
+#
+# print("Start")
+# great_user(Id = "John", name = 1)
+# print("Finish")
+# '''
+
+'''def emoji_converter(sentence):
+    words = sentence.split(' ')
+    emoji_dict = {
+        ":)": "😃",
+        "):": "🥲"
+    }
+    output = ""
+    for word in words:
+        output += emoji_dict.get(word, word) + " "
+    return output
+
+
+message = input(">")
+print(emoji_converter(message))'''
+
+
+
+
+
+'''phone = input("Phone:")
+mapping_dig = {
+    "0": "Zero",
+    "1": "One",
+    "2": "Two",
+    "3": "Three",
+    "4": "Four",
+    "5": "Five",
+    "6": "Six",
+    "7": "Seven",
+    "8": "Eight",
+    "9": "Nine",
+}
+output = ""
+for num in phone:
+    output += mapping_dig.get(num, "i") + " "
+    if num in mapping_dig:
+        print(mapping_dig[num], end=" ")
+print()
+print(output)'''
+'''f_shape = [2,2, 2, 10
+    , 7]
+i = f_shape[0]
+for num in f_shape:
+    if num > i:
+        i = num
+
+print(i)
+'''
+
+
+
+
+
+
+'''for x in range(4):
+    for y in range(4):
+        print(f'x:{x}, y:{y}')'''
+
+
+'''prices = [10, 20, 30]
+total = 0
+for price in prices:
+    total += price
+print(f'Total = {total}')'''
+
+
+'''for i in range(4):
+    print("?", end='')
+print()
+'''
 
 '''def main():
     height = get_height()
